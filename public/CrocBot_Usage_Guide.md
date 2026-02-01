@@ -2,8 +2,9 @@
 
 ## 1. Project Overview
 **Crocodile Game BOT** (@CrocodileGameEnn_bot) is the most advanced Telegram bot enabling an AI-powered multiplayer word-guessing game, also built-in chatbot. Players take turns describing and guessing secret words, earning virtual currency (CrocCash 💵) for correct guesses and successful leadership.
-*   **Official Updates:** [t.me/CrocodileGames](https://t.me/s/CrocodileGames)
-*   **Support:** @CrocodileGamesGroup
+*   **Official Updates:** [t.me/CrocodileGames](https://t.me/CrocodileGames)
+*   **Official Support/Game Group:** @CrocodileGamesGroup
+*   **Creator & Owner:** Exception (@exceptionl)
 
 ## 2. Game Mechanics
 ### Roles
@@ -15,12 +16,7 @@
 2.  **Describing:** Leader provides hints (definitions, synonyms, scenarios).
 3.  **Guessing:** Participants type words.
 4.  **Win:** First exact match wins. The winner typically becomes the next leader.
-5.  **Timeout:** Game auto-stops if the leader does not view/know the word within 1 minute.
-
-### AI Chatbot (Croco 2.0)
-The bot also functions as a multimodal AI assistant & casual human-like chatbot supporting inputs in 15+ languages.
-*   **Trigger:** Tag `@croco` or reply to the bot in the support group.
-*   **Capabilities:** General queries, image analysis, and voice notes.
+5.  **Timeout:** Game auto-stops if the leader does not view/know the word within 1 minute, or if doesn't provide hints within 5 minutes.
 
 ## 3. Rules & Economy (CrocCash 💵)
 *Currency is virtual and holds no real-world value.*
@@ -37,24 +33,37 @@ The bot also functions as a multimodal AI assistant & casual human-like chatbot 
 *   `/game` - Start a new game / Join queue.
 *   `/stop` - Stop active game (Leader/Admin only).
 *   `/hint` (or `/who`, `/question`) - Show hints provided so far or request hint from AI (if applicable).
-*   `/mystats` - View personal statistics and valid currency.
+*   `/mystats` - View own game statistics and valid currency.
+*   `/stats` - Reply to other's message to view their stats.
 *   `/ranking` - Top 25 players in the current chat.
 *   `/globalranking` - Top 25 players across all chats.
 *   `/chatranking` - Top 10 groups by total CrocCash.
-*   `/addword <word>` - Submit a new word to the dictionary.
+*   `/addword <word>` - Submit a new word to the dictionary (to be approved by bot mods).
 *   `/wordset` - View/change word set in current chat (Admin only).
 *   `/settings` - Configure user/group preferences (PM only).
 *   `/rules` - Display game rules.
 
-## 5. AI & Safety Systems (Compliance)
-The bot utilizes AI to monitor gameplay fairness and content safety.
+## 5. AI Chatbot (Croco 2.0)
+The bot also functions as a multimodal AI assistant & casual human-like chatbot supporting inputs in 15+ languages.
+*   **Trigger:** Tag `@croco` or reply to the bot in the group.
+*   **Capabilities:** General queries, image analysis, voice notes, and casual/fun talks.
+*   **Availability:** In **Official Support Group** only.
+
+## 6. AI & Safety Systems (Compliance)
+The bot utilizes AI & smart algorithms to monitor gameplay fairness and content safety by itself automatically.
 
 ### Anti-Cheat
-*   **Detection:** Bot automatically detects whisper bots, self-bots, and collaborative cheating patterns.
+*   **Scope:** All chats globally.
+*   **Detection:** Whisper bots, self-userbots, and collaborative cheating patterns.
 *   **Action:** Immediate point deduction and potential user/group blocks.
 
+### Anti-Spam Measures
+*  **Scope:** All chats globally.
+*  **Detection:** Sending multiple commands/requests to the bot in a short period.
+*   **Action:** Rate limits are triggered, or immediate user/group blocks in extreme scenarios.
+
 ### Abuse Content Protection Policy
-*   **Scope:** Strictly enforced in the **Official Support Group**; penalties apply globally.
+*   **Scope:** Strictly & exclusively enforced in the **Official Support Group** only; penalties apply globally.
 *   **Prohibited Content:** Hate speech, sexual content (text/media), double meanings, illegal advertising, privacy breaches, and harassment.
 *   **AI Decoding:** The bot analyzes standard text and **emoji combinations** for hidden meanings in leader's hints.
     *   *Example:* Identifying "🍑 + logic gate + ☀️" as an attempt to obscure inappropriate words (e.g., ass-er-tion).
@@ -63,7 +72,7 @@ The bot utilizes AI to monitor gameplay fairness and content safety.
     2.  **Action:** Immediate global ban from bot services and in extreme cases results removal from support group too.
     3.  **Appeals:** User must contact @admin with detailed justification. Multiple appeals (i.e. spam) in short intervals may cause a ban from group.
 
-## 6. Troubleshooting
+## 7. Troubleshooting
 For issues not resolving via `/help` or `/rules`:
 1.  Check the Official Channel for maintenance alerts.
 2.  Contact admins in @CrocodileGamesGroup with specific screenshots/logs.
