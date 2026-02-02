@@ -4,87 +4,86 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="96SlFIMNvjpEfjttlaRewNfdeZRnptw3J5Bw1cs1tZE" />
-    <title>Welcome to Firebase Hosting</title>
-
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/12.8.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/12.8.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/12.8.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/12.8.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/12.8.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/12.8.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/12.8.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/12.8.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/12.8.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/12.8.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
+    <title>Crocodile Game BOT Rules & Guide</title>
   </head>
   <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+# Crocodile Game Bot Docs & Usage Guide
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+## 1. Project Overview
+**Crocodile Game BOT** (@CrocodileGameEnn_bot) is the most advanced Telegram bot enabling an AI-powered multiplayer word-guessing game, also built-in chatbot. Players take turns describing and guessing secret words, earning virtual currency (CrocCash 💵) for correct guesses and successful leadership.
+*   **Official Updates:** [t.me/CrocodileGames](https://t.me/CrocodileGames)
+*   **Official Support/Game Group:** @CrocodileGamesGroup
+*   **Creator & Owner:** Exception (@exceptionl)
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+## 2. Game Mechanics
+### Roles
+*   **Leader:** Selected randomly or via Auto-Lead. Receives a **secret word** (or can choose a custom one via "Write Word" button). Must describe it to others using text/media/voice without explicitly naming the word or its root forms.
+*   **Participants:** Read hints and type guesses in the public chat.
+
+### Gameplay Flow
+1.  **Start:** `/game` initiates a round.
+2.  **Describing:** Leader provides hints (definitions, synonyms, scenarios).
+3.  **Guessing:** Participants type words.
+4.  **Win:** First exact match wins. The winner typically becomes the next leader.
+5.  **Timeout:** Game auto-stops if the leader does not view/know the word within 1 minute, or if doesn't provide hints within 5 minutes.
+
+## 3. Rules & Economy (CrocCash 💵)
+*Currency is virtual and holds no real-world value.*
+
+| Action | Reward | Condition |
+| :--- | :--- | :--- |
+| **Correct Guess** | **+1 💵** | First player to type the secret word. |
+| **Perfect Play** | **+3 💵** | Guess correctly (+1) AND successfully lead the immediate next round (+2). |
+| **Word Leak** | **-1 💵** | Leader reveals the secret word in chat. |
+| **Premature Guess** | **-1 💵** | Participant guesses correctly *before* the leader sends any hints (anti-cheat measure). |
+| **Cheating** | **-1 💵** | Using whisper bots, external cheats, or unfair means. |
+
+## 4. Command Reference
+*   `/game` - Start a new game / Join queue.
+*   `/stop` - Stop active game (Leader/Admin only).
+*   `/hint` (or `/who`, `/question`) - Show hints provided so far or request hint from AI (if applicable).
+*   `/mystats` - View own game statistics and valid currency.
+*   `/stats` - Reply to other's message to view their stats.
+*   `/ranking` - Top 25 players in the current chat.
+*   `/globalranking` - Top 25 players across all chats.
+*   `/chatranking` - Top 10 groups by total CrocCash.
+*   `/addword <word>` - Submit a new word to the dictionary (to be approved by bot mods).
+*   `/wordset` - View/change word set in current chat (Admin only).
+*   `/settings` - Configure user/group preferences (PM only).
+*   `/rules` - Display game rules.
+
+## 5. AI Chatbot (Croco 2.0)
+The bot also functions as a multimodal AI assistant & casual human-like chatbot supporting inputs in 15+ languages.
+*   **Trigger:** Tag `@croco` or reply to the bot in the group.
+*   **Capabilities:** General queries, image analysis, voice notes, and casual/fun talks.
+*   **Availability:** In **Official Support Group** only.
+
+## 6. AI & Safety Systems (Compliance)
+The bot utilizes AI & smart algorithms to monitor gameplay fairness and content safety by itself automatically.
+
+### Anti-Cheat
+*   **Scope:** All chats globally.
+*   **Detection:** Whisper bots, self-userbots, and collaborative cheating patterns.
+*   **Action:** Immediate point deduction and potential user/group blocks.
+
+### Anti-Spam Measures
+*  **Scope:** All chats globally.
+*  **Detection:** Sending multiple commands/requests to the bot in a short period.
+*   **Action:** Rate limits are triggered, or immediate user/group blocks in extreme scenarios.
+
+### Abuse Content Protection Policy
+*   **Scope:** Strictly & exclusively enforced in the **Official Support Group** only; penalties apply globally.
+*   **Prohibited Content:** Hate speech, sexual content (text/media), double meanings, illegal advertising, privacy breaches, and harassment.
+*   **AI Decoding:** The bot analyzes standard text and **emoji combinations** for hidden meanings in leader's hints.
+    *   *Example:* Identifying "🍑 + logic gate + ☀️" as an attempt to obscure inappropriate words (e.g., ass-er-tion).
+*   **Enforcement:**
+    1.  **Detection:** AI flags inappropriate content contextually.
+    2.  **Action:** Immediate global ban from bot services and in extreme cases results removal from support group too.
+    3.  **Appeals:** User must contact @admin with detailed justification. Multiple appeals (i.e. spam) in short intervals may cause a ban from group.
+
+## 7. Troubleshooting
+For issues not resolving via `/help` or `/rules`:
+1.  Check the Official Channel for maintenance alerts.
+2.  Contact admins in @CrocodileGamesGroup with specific screenshots/logs.
+</body>
 </html>
