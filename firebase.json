@@ -1,11 +1,7 @@
 {
   "hosting": {
     "public": "public",
-    
-    // Removes .html extensions (e.g., /page.html redirects to /page)
     "cleanUrls": true,
-    
-    // Removes trailing slashes (e.g., /page/ redirects to /page)
     "trailingSlash": false,
 
     "ignore": [
@@ -14,7 +10,6 @@
       "**/node_modules/**"
     ],
     
-    // Keep your existing rewrites if you have a Single Page App (SPA)
     "rewrites": [
       {
         "source": "**",
